@@ -22,7 +22,7 @@ console.log("Элементы в диапапзоне от -10 до -5: ", resul
 //3. Вывести элементы с нечетных позиций в диапазоне от -5 до 5, кратные 3
 result = "";
 for (i = 1; i < numbers.length; i+=2) {
-    if (numbers[i] > -5 && numbers[i] < 5 && numbers[i] % 3 === 0)
+    if (numbers[i] > -5 && numbers[i] < 5 && !(numbers[i] % 3))
         result += numbers[i];
 }
 console.log("Элементы с нечетных позиций в диапазоне от -5 до 5, кратные 3: ", result);
@@ -30,6 +30,10 @@ console.log("Элементы с нечетных позиций в диапаз
 //4. Получить номер из строки AC45678EA
 var myString = "AC45678EA";
 console.log("Номер из строки AC45678EA: ", myString.substr(2, 5));
+
+var myString2 = "AC 45678 EA";
+res = myString2.split(' ');
+console.log("Номер из строки AC45678EA: ", res[1]);
 
 //5. Вывести время 19:26 в формате 19 часов 26 минут
 var sTime = "19:26",
