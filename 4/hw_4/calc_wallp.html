@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор обоев</title>
+</head>
+<body>
+<h2>Калькулятор расчета обоев</h2>
+    <form id="form4calc">
+        Длина комнаты:
+        <br><input type="text" pattern="^[0-9]+$" required id="roomLength">
+        <br>Ширина комнаты:
+        <br><input type="text" pattern="^[0-9]+$" required id="roomWidth">
+        <br>Высота комнаты:
+        <br><input type="text" pattern="^[0-9]+$" required id="roomHeight">
+        <br>Ширина окна:
+        <br><input type="text" pattern="^[0-9]+$" required id="windowWidth">
+        <br>Высота окна:
+        <br><input type="text" pattern="^[0-9]+$" required id="windowHeight">
+        <br>Ширина двери:
+        <br><input type="text" pattern="^[0-9]+$" required id="doorWidth">
+        <br>Высота двери:
+        <br><input type="text" pattern="^[0-9]+$" required id="doorHeight">
+        <br>Ширина рулона:
+        <br><input type="text" pattern="^[0-9]+$" required id="wallpaperWidth">
+        <br>Длина рулона:
+        <br><input type="text" pattern="^[0-9]+$" required id="wallpaperLength">
+        <hr><input type="button" value="Рассчитать" id="calc_btn">
+        <input type="reset" value="Очистить">
+        <label>
+            <h3>Результат: <p id="result"></p></h3>
+        </label>
+    </form>
+<script src="scripts/calc_wallp.js"></script>
+</body>
+</html>
