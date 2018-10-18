@@ -6,7 +6,7 @@ function translit() {
             "б" : "b",
             "г" : "g",
             "м" : "m"},
-        translitMessage = $("#message2")
+        translitMessage = $("#message2"),
         translitMessageVal = "";
 
     translitMessage.val("");

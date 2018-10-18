@@ -30,6 +30,7 @@
 /* 	visibility: visible;
 	opacity: 1; */
 	display: block;
+    text-decoration: underline;
 	}
 
 .b-submenu__item {
