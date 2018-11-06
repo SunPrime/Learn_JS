@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+li {
+    display: inline-block;
+    text-decoration: none;
+    border:2px solid green;
+}
+
+a  {
+    text-decoration: none;
+    font-size: 16px;
+}
+a:focus {
+    background: rgba(125,125,0,0.5);
+}
+.active{
+	background: yellow;
+}
+    </style>
+</head>
+<body>
+	<div id="tabs1">
+		<ul class="tabs">
+			<li><a href="#about">О товаре</a></li>
+			<li><a href="#info">Характеристики</a></li>
+			<li><a href="#reviews">Отзывы</a></li>
+		</ul>
+		<div class="tab-container">
+			<div id="about" class="tab-content">123456890</div>
+			<div id="info" class="tab-content">asdfghjkl;'</div>
+			<div id="reviews" class="tab-content">!@#$%^&*()</div>
+		</div>
+	</div>
+
+	<script src="scripts/jquery-3.3.1.min.js"></script>
+	<!-- <script src="scripts/script.js"></script> -->
+	<script src="scripts/tabs.js"></script>
+	<script>
+		var tabs1 = new Tabs("#tabs1");
+	</script>
+</body>
+</html>
