@@ -3,8 +3,7 @@ class Slider{
         this.slider     = $(sSelector);
         this.image      = this.slider.find(".slide-img");
         this.currentImageIndex = 0;
-        this.arrowPrev  = this.slider.find(".arrow_prev");
-        this.arrowNext  = this.slider.find(".arrow_next");
+        this.arrows  = this.slider.find(".arrows");
         this.buttons    = this.slider.find(".button");
 
         this.createEvents();
@@ -27,7 +26,6 @@ class Slider{
 
     createEvents(){
         this.buttons.click(this.showImage.bind(this));
-        this.arrowPrev.click(this.showPrev.bind(this));
-        this.arrowNext.click(this.showNext.bind(this));
+        this.arrows.click(this.showPrev.bind(this));
 }
 }
