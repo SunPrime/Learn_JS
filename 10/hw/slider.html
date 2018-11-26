@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдер</title>
+    <link rel='stylesheet' href='css/slider.css'>
+</head>
+<body>
+    <div class="slider" id="slider1">
+        <div class="slide"><img src="images/img_0.jpg" class="slide-img"></div>
+        <div class="arrows">
+            <button class="arrow_prev"><</button>
+            <button class="arrow_next">></button>
+        </div>
+        <div class="controls">
+            <button class="button"></button>
+            <button class="button"></button>
+            <button class="button"></button>
+            <button class="button"></button>
+        </div>
+    </div>
+
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/slider.js"></script>
+<script>
+    let sl1 = new Slider("#slider1");
+</script>
+</body>
+</html>
