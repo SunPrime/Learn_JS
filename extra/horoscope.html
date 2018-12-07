@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows-1251">
+    <title>Horoscope</title>
+</head>
+<body>
+    <div class="horoscope" id="horo1">
+        <label>Знак зодиака</label>
+        <select class="zodiac" name="zodiac">
+            <option class="capricorn" value="capricorn" data-zodiac="capricorn">Козерог</option>
+            <option class="aquarius" value="aquarius">Водолей</option>
+            <option class="pisces" value="pisces">Рыбы</option>
+            <option class="aries" value="aries">Овен</option>
+            <option class="taurus" value="taurus">Телец</option>
+            <option class="gemini" value="gemini">Близнецы</option>
+            <option class="cancer" value="cancer">Рак</option>
+            <option class="leo" value="leo">Лев</option>
+            <option class="virgo" value="virgo">Дева</option>
+            <option class="libra" value="libra">Весы</option>
+            <option class="scorpio" value="scorpio">Скорпион</option>
+            <option class="sagittarius" value="sagittarius">Стрелец</option>
+        </select>
+        <br>
+        <label>Месяц</label>
+        <select class="month" name="month">
+            <option class="january" value="january">январь</option>
+            <option class="february" value="february">февраль</option>
+            <option class="march" value="march">март</option>
+            <option class="april" value="april">апрель</option>
+            <option class="may" value="may">май</option>
+            <option class="june" value="june">июнь</option>
+            <option class="july" value="july">июль</option>
+            <option class="august" value="august">август</option>
+            <option class="september" value="september">сентябрь</option>
+            <option class="october" value="october">октябрь</option>
+            <option class="november" value="november">ноябрь</option>
+            <option class="december" value="december">декабрь</option>
+        </select>
+        <br>
+        <label>День</label>
+        <input type="number" class="day">
+        <br>
+        <button type="button" class="button">Получить</button>
+        <div class="result" style="display: none">
+            <label>Ваш гороскоп на сегодня:</label>
+            <br>
+            <p id="result"></p>
+        </div>
+    </div>
+
+</body>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/horoscope.js"></script>
+    <script src="scripts/horoscope-data.js"></script>
+        <script>
+            let horo1 = new Horoscope("#horo1");
+        </script>
+</html>

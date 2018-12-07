@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows-1251">
+    <title>Your perfect weight</title>
+    <link rel="stylesheet" href="css/perfectweight.css">
+</head>
+<body>
+    <div id="weight1">
+        <form>
+            <label>Poст: </label>
+            <input type="text" name="height" class="height textfield">
+            <br>
+            <label>Вес: </label>
+            <input type="text" name="weight" class="weight textfield">
+            <br>
+            <label>Пол: </label>
+            <select name="sex" class="sex">
+                <option value="man">Мужчина</option>
+                <option value="woman">Женщина</option>
+            </select>
+            <br>
+            <input type="button" value="Расчитать" class="btn">
+        </form>
+        <div class="message"></div>
+    </div>
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/perfectweight.js"></script>
+    <script>
+        let weight1 = new Perfectweight("#weight1");
+    </script>
+</body>
+</html>

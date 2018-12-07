@@ -1,4 +1,6 @@
-var langs =  {
+let pageSettings = {
+
+	langs :  {
 				 "b-form__label_name" : {
 					"ru" : "Имя"
 					,"ua" : "Ім'я"
@@ -27,4 +29,15 @@ var langs =  {
 				  "ru" : "Отправить"
 					,"ua" : "Надiслати"
 					}
-			};
+			}
+};
+
+Settings.init(pageSettings);
+
+//пройтись циклом и вывести тексты
+$.each(pageSettings.langs, (index, val)=>{
+	console.log(
+		`${index}: ${val.ru}
+				   ${val.ua}`
+	);
+});

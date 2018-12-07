@@ -8,7 +8,8 @@ class Menu {
 
     showHideMenu(event){
         let changeMenu = $(event.currentTarget);
-        changeMenu.toggleClass("change");
+        //changeMenu.toggleClass("change");
+        changeMenu.slideToggle();
         this.menu.toggleClass("menu-item");
     }
 

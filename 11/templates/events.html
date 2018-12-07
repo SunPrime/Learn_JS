@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+		<link rel='stylesheet' href='../css/events.css'>
+	</head>
+	<body>
+
+		<div class='b-pad' id='div1'>
+			<div class='b-pad__coord b-pad__coord_x'></div>
+			<div class='b-pad__coord b-pad__coord_y'></div>
+			<div class='b-pad__coord b-pad__coord_target'></div>
+			<br>
+			<div class='b-pad__coord b-pad__coord_x-relative'></div>
+			<div class='b-pad__coord b-pad__coord_y-relative'></div>
+			<br>
+			<div class='b-pad__coord b-pad__coord_keyinfo'></div>
+			<input type='text' class='b-pad__text'>
+		</div>
+		<script src="../scripts/jquery-3.3.1.min.js"></script>
+		<script src='../scripts/events.js'></script>
+		<script>
+			let pad1 = new Event("#div1");
+		</script>
+	</body>
+
+</html>

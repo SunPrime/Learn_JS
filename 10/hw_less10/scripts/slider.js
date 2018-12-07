@@ -38,7 +38,8 @@ class Slider{
     }
 
     changeImage(index, diff){
-        $(this.buttons[this.currentImageIndex]).css("background-color", "");
+        this.buttons.eq(this.currentImageIndex).css("background-color", "");
+        //$(this.buttons[this.currentImageIndex]).css("background-color", "");
         if (this.currentImageIndex === (this.max - index)){
             this.currentImageIndex = index;
         } else {

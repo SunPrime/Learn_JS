@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+		<meta charset="utf-8">
+	</head>
+	
+	<body>
+		<div id="game1">
+			<form>
+				<select class="userAnswer">
+					<option value="rock">rock</option>
+					<option value="scissors">scissors</option>
+					<option value="paper">paper</option>
+				</select>
+				<input type="button" value="OK" class="btn">
+			</form>
+			<div class="result" style="display: none;">
+				<img src="" class="userAnswerImg" width="150">
+				<img src="" class="computerAnswerImg" width="150">
+				<div class="message"></div>
+			</div>
+		</div>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script src="scripts/game.js"></script>
+	<script>
+		let game1 = new Game("#game1");
+	</script>
+	</body>
+</html>
