@@ -1,6 +1,7 @@
 class Perfectweight {
     constructor(sSelector){
         this.form = $(sSelector);
+        this.messageError = this.form.find(".form__message_error");
         this.textfield = this.form.find(".textfield");
         this.height = this.form.find(".height");
         this.weight = this.form.find(".weight");
@@ -16,7 +17,7 @@ class Perfectweight {
             currentTextfieldVal = currentTextfield.val(),
             regexps = {
                 "height" : "^[0-9]{3}$",
-                "weight" : "^[0-9]{2,3}(\\.|\\,[0-9]{1,2})?$"
+                "weight" : "^[0-9]{2,3}(\\.[0-9]{1,2})?$"
             },
             currentTextfieldName = currentTextfield.attr("name"),
             currentRegExp        = new RegExp(regexps[currentTextfieldName]),
@@ -26,24 +27,30 @@ class Perfectweight {
     }
 
     getMessage(event){
+        this.messageError.css("display","none");
+        this.message.text("");
         let height           = this.height.val(),
             weight           = this.weight.val(),
             sex              = this.sex.val(),
             indexIdealWeight = {
-                "man"   : [4, 128],
-                "woman" : [3.5, 108]
+                "male"   : [4, 128],
+                "female" : [3.5, 108]
             },
             idealWeight = Math.round(((height * indexIdealWeight[sex][0]) / 2.54 - indexIdealWeight[sex][1]) * 0.453),
             diff = idealWeight - weight;
+
         console.log(weight);
         if (diff > 0){
-            this.message.text(`Вам нужно набрать вес! Ваш идеальный вес ${idealWeight} кг`);
+            this.message.text(`Вам нужно набрать ${diff} кг! Ваш идеальный вес ${idealWeight} кг`);
         }
         else if(diff < 0){
-            this.message.text(`Вам нужно похудеть! Ваш идеальный вес ${idealWeight} кг`);
+            this.message.text(`Вам нужно сбросить ${diff}! Ваш идеальный вес ${idealWeight} кг`);
+        }
+        else if(diff === 0){
+            this.message.text("Ваш вес идеальный!")
         }
         else {
-            this.message.text("Ваш вес идеальный!")
+            this.messageError.css("display","block");
         }
     }
 
