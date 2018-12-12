@@ -22,7 +22,39 @@ class Game{
 
     play(){
         this.getComputerAnswer();
-        console.log(this.userAnswer.val(), this.computerAnswer)
+        console.log(this.userAnswer.val(), this.computerAnswer);
+
+        let table = {
+            "rock"      : {
+                "rock"      : 0,
+                "scissors"  : 1,
+                "paper"     : -1
+            },
+            "scissors"  : {
+                "rock"      : -1,
+                "scissors"  : 0,
+                "paper"     : 1
+            },
+            "paper"     : {
+                "rock"      : 1,
+                "scissors"  : -1,
+                "paper"     : 0
+            }
+        },
+            messages = {
+                "-1" : "Вы проиграли",
+                "0"  : "Ничья",
+                "1"  : "Вы выиграли"
+            };
+
+        this.showResult(messages[table[this.userAnswer.val()][this.computerAnswer]])
+    }
+
+    showResult(message){
+        this.result.css("display","block");
+        this.userAnswerImg.attr("src", `images/${this.userAnswer.val()}.png`);
+        this.computerAnswerImg.attr("src", `images/${this.computerAnswer}.png`);
+        this.message.text(message);
     }
 
     createEvents(){
