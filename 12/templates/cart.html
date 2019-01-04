@@ -22,8 +22,8 @@
 						<div class='b-good__price'></div>
 						<form action='#' method='POST' class='b-order-form'>
 							<input type='text' name = 'quantity' value='1' class='b-order-form__quantity'>
-							<input type='button' value = '+' class='b-order-form__plus'>
-							<input type='button' value = '-' class='b-order-form__minus'>
+							<input type='button' value = '+' class='b-order-form__btn b-order-form__plus' data-step="1">
+							<input type='button' value = '-' class='b-order-form__btn b-order-form__minus' data-step="-1">
 							<input type='submit' value = 'OK' class='b-order-form__order'>
 						</form>
 					</td>
@@ -46,8 +46,8 @@
 					<div class='b-good__price'>1000</div>
 					<form action='#' method='POST' class='b-order-form'>
 						<input type='text' name = 'quantity' value='1' class='b-order-form__quantity'>
-						<input type='button' value = '+' class='b-order-form__plus'>
-						<input type='button' value = '-' class='b-order-form__minus'>
+						<input type='button' value = '+' class='b-order-form__btn b-order-form__plus' data-step="1">
+						<input type='button' value = '-' class='b-order-form__btn b-order-form__minus' data-step="-1">
 						<input type='submit' value = 'OK' class='b-order-form__order'>
 					</form>
 				</td>
@@ -62,8 +62,8 @@
 					<div class='b-good__price'>2000</div>
 					<form action='#' method='POST' class='b-order-form'>
 						<input type='text' name = 'quantity' value='1' class='b-order-form__quantity'>
-						<input type='button' value = '+' class='b-order-form__plus'>
-						<input type='button' value = '-' class='b-order-form__minus'>
+						<input type='button' value = '+' class='b-order-form__btn b-order-form__plus' data-step="1">
+						<input type='button' value = '-' class='b-order-form__btn b-order-form__minus' data-step="-1">
 						<input type='submit' value = 'OK' class='b-order-form__order'>
 					</form>
 				</td>
@@ -78,8 +78,8 @@
 					<div class='b-good__price'>3000</div>
 					<form action='#' method='POST' class='b-order-form'>
 						<input type='text' name = 'quantity' value='1' class='b-order-form__quantity'>
-						<input type='button' value = '+' class='b-order-form__plus'>
-						<input type='button' value = '-' class='b-order-form__minus'>
+						<input type='button' value = '+' class='b-order-form__btn b-order-form__plus' data-step="1">
+						<input type='button' value = '-' class='b-order-form__btn b-order-form__minus' data-step="-1">
 						<input type='submit' value = 'OK' class='b-order-form__order'>
 					</form>
 				</td>
@@ -94,8 +94,8 @@
 					<div class='b-good__price'>4000</div>
 					<form action='#' method='POST' class='b-order-form'>
 						<input type='text' name = 'quantity' value='1' class='b-order-form__quantity'>
-						<input type='button' value = '+' class='b-order-form__plus'>
-						<input type='button' value = '-' class='b-order-form__minus'>
+						<input type='button' value = '+' class='b-order-form__btn b-order-form__plus' data-step="1">
+						<input type='button' value = '-' class='b-order-form__btn b-order-form__minus' data-step="-1">
 						<input type='submit' value = 'OK' class='b-order-form__order'>
 					</form>
 				</td>
@@ -107,7 +107,7 @@
 		<script src="../scripts/goods.js"></script>
 		<script src="../scripts/cart.js"></script>
 		<script>
-			var cart1 = new Cart("#goods1", "#minicart1");
+			let cart1 = new Cart("#goods1", "#minicart1");
 		</script>
 	</body>
 </html>
